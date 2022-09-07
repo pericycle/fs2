@@ -1,0 +1,39 @@
+body {
+    background-color: white;
+}
+
+#hwTitle {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.school {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.work {
+    padding-left: 30%;
+    float: center;
+}
+
+.center-eqn {
+    padding-right: 50%;
+    color: black;
+}
+
+.hint {
+    color: blue;
+}
+
+.hint-eqn {
+    color: rgb(158, 60, 14);
+    padding-right: 50%;
+}
+
+.btext {
+    color: black;
+}
