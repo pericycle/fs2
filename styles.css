@@ -11,12 +11,15 @@ body {
     text-align: center;
 }
 
-
-@media only screen and (min-width: 770px){
-.work {
-    padding-left: 30%;
-    float: center;
+p {
+    text-align: center;
 }
+
+@media (min-width: 760px) {
+    .work {
+        padding-left: 30%;
+        float: center;
+    }
 }
 
 .center-eqn {
@@ -26,7 +29,7 @@ body {
 
 .hint {
     color: blue;
-    font-style: italics;
+    font-style: italic;
 }
 
 .hint-eqn {
@@ -36,4 +39,20 @@ body {
 
 .btext {
     color: black;
+}
+
+.soln {
+    color: rgb(158, 0, 255);
+    text-align: center;
+}
+
+.solntext {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.solntext-center {
+    color: rgb(158, 0, 255);
+    padding-right: 50%;
 }
