@@ -26,6 +26,7 @@ body {
 
 .hint {
     color: blue;
+    font-style: italics;
 }
 
 .hint-eqn {
