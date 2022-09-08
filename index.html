@@ -179,11 +179,11 @@
                         The Fourier Transform of a function \(f(x)\) is given by
                     </p>
                     <p class="solntext-center">
-                        $$\widehat{f}(\mu) = \int_{-\infty}^\infty f(x)e^{i\mu x}\,dx $$
+                        $$\widehat{f}(\mu) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty f(x)e^{i\mu x}\,dx $$
                     </p>
                     <p class="solntext">In this case, we have</p>
                     <p class="solntext-center">
-                        $$\begin{align*} \widehat{f}(\mu) &= \int_{-1}^1 e^{i\mu x}\,dx \\ & = \int_{-1}^0 e^{i\mu x}\, dx + \int_0^1 e^{i\mu x}\, dx \\ & = \int_{0}^1 \left( e^{-i\mu x} + e^{i\mu x}\right)\,dx \\ & = 2 \int_0^1 \cos(\mu x)\, dx \\ & = 2\frac{\sin(\mu x)}{\mu}
+                        $$\begin{align*} \widehat{f}(\mu) &= \frac{1}{\sqrt{2\pi}}\int_{-1}^1 e^{i\mu x}\,dx \\ & = \frac{1}{\sqrt{2\pi}}\int_{-1}^0 e^{i\mu x}\, dx + \frac{1}{\sqrt{2\pi}}\int_0^1 e^{i\mu x}\, dx \\ & = \frac{1}{\sqrt{2\pi}}\int_{0}^1 \left( e^{-i\mu x} + e^{i\mu x}\right)\,dx \\ & = \frac{2}{\sqrt{2\pi}} \int_0^1 \cos(\mu x)\, dx \\ & = \sqrt{\frac{2}{\pi}}\frac{\sin(\mu x)}{\mu}
                         \end{align*} $$
                     </p>
 
