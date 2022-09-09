@@ -11,6 +11,15 @@ body {
     text-align: center;
 }
 
+.assignments {
+    padding-left: 30%;
+    padding-top: 30px;
+}
+
+.solns {
+    padding-left: 10px;
+}
+
 p {
     text-align: center;
 }
@@ -28,12 +37,12 @@ p {
 }
 
 .hint {
-    color: blue;
+    color: rgb(255, 89, 0);
     font-style: italic;
 }
 
 .hint-eqn {
-    color: blue;
+    color: rgb(255, 102, 0);
     padding-right: 50%;
 }
 
@@ -42,7 +51,7 @@ p {
 }
 
 .soln {
-    color: rgb(158, 0, 255);
+    color: #450e9e;
     text-align: center;
 }
 
@@ -50,9 +59,10 @@ p {
     text-align: left;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-weight: normal;
 }
 
 .solntext-center {
-    color: rgb(158, 0, 255);
+    color: rgb(40, 4, 159);
     padding-right: 50%;
 }
