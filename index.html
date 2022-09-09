@@ -12,225 +12,31 @@
 
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Fourier Series</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Fourier Analysis</title>
 </head>
 
 <body>
-    <h1 id="hwTitle"> MT201 - Engineering Mathematics 2 <br> Solutions Tutorial 2</h1>
-    <h3 class="school"> University of Zimbabwe, Block A, 2022 </h3>
+    <h1 id="hwTitle"> MT201 - Engineering Mathematics 2</h1>
+    <h3 class="school">Section: Fourier Series and Partial Differential Equations</h3>
+    <h3 class="school"> University of Zimbabwe, Block A, August 2022 </h3>
 
-    <div class="work">
-        <h3>Due date: 8 September, 2022</h3>
-        <hr>
-        <p>
-            <ol>
-                <li>
-                    Let <span class="btext">\(f(x)=x\)</span> be a periodic function with period <span class="btext">\(2\pi\).</span>
-                    <ol type="a">
-                        <li>
-                            Plot the graph of \(f(x)\) on the interval \(-3\pi\leq x\leq 3\pi\).
-                            <div>
-                                <img src="sawtooth.png" alt="sawtooth">
-                            </div>
-                        </li>
-                        <hr>
-                        <li>
-                            Find the Fourier series of \(f(x)\) on the interval \(-\pi
-                            < x\leq \pi\) <div class="soln">
-                                <p class="solntext"><b>Solution:</b></p>
-
-                                <p class="solntext">
-                                    The function \(f(x) = x\) is odd on the interval \( (-\pi, \pi]\). Hence the Fourier series for \( f(x)\) has the simple form
-                                    <div class="solntext-center">\[ f(x) = \sum_{n=1}^\infty b_n \sin(n x)\]</div>
-                                    <p class="solntext">where the \(b_n\) are calculated using integration by parts:</p>
-                                    <div class="solntext-center">
-                                        \[\begin{align*} b_n &= \frac{2}{\pi}\int_{0}^\pi x \sin(nx)\,dx \\ & = -\frac{2}{\pi}\frac{x\cos(nx)}{n}\bigg\vert_0^\pi +\frac{2}{\pi n}\int_0^\pi \cos(n x)\, dx \\ & = -\frac{2}{\pi}\frac{\pi\cos(n\pi)}{n} + \cancel{\frac{2}{\pi n} \frac{\sin(nx)}{n}\bigg\vert_0^\pi}
-                                        \\ & = \frac{2}{n}(-1)^{n+1} \end{align*} \]
-                                    </div>
-                                    <p class="solntext">where we have used \(\cos(n\pi) = (-1)^n\). Therefore,</p>
-                                    <div class="solntext-center">\[ f(x) = \sum_{n=1}^\infty \frac{2}{n}(-1)^{n+1}\sin(nx). \]</div>
-
-
-
-                                </p>
-
-
-
+    <div class="assignments">
+        <ul>
+            <li>
+                <a href="tutorial1.html">assignment 1</a>
+                <span class="solns">
+                    <a href="solutions1.html">solutions</a>
+                </span>
+            </li>
+            <li>
+                <a href="tutorial2.html">assignment 2</a>
+                <span class="solns">
+                    <a href="solutions2.html">solutions</a>
+                </span>
+            </li>
+        </ul>
     </div>
-    </li>
-    <hr>
-    <li>
-        State Parseval's identity for the Fourier coefficients derived in Part (b).
-        <div class="soln">
-            <p class="solntext"><b>Solution:</b></p>
-
-            <p class="solntext">
-                Parseval's identity states that if \(f(x)\) has a Fourier series
-                <div class="solntext-center">
-                    \[ f(x) = \frac{a_0}{2} + \sum_{n=1}^\infty \left( a_n \cos(nx) + b_n \sin(nx) \right)\]
-                </div>
-                <p class="solntext">then </p>
-                <div class="solntext-center">
-                    \[\frac{a_0^2}{2} + \sum_{n=1}^\infty\left(a_n^2 +b_n^2\right) = \frac{1}{\pi}\int_{-\pi}^{\pi} (f(x))^2\,dx\]
-                </div>
-                <p class="solntext">Since \(a_0,a_n = 0\) for every \(n = 0,1,2,3,\cdots\) we have</p>
-                <div class="solntext-center">
-                    \[ \frac{1}{\pi}\int_{-\pi}^\pi (f(x))^2\,dx = \sum_{n=1}^\infty b_n^2\]
-                </div>
-                <p class="solntext">so in particular</p>
-                <div class="solntext-center">
-                    \[ \frac{1}{\pi}\int_{-\pi}^\pi x^2\,dx= \sum_{n=1}^\infty \frac{4}{n^2} \]
-                </div>
-            </p>
-        </div>
-
-    </li>
-<hr>
-    <li>
-        Use Parseval's identity stated in Part (c) to show that <br>
-        <div class="center-eqn"> \[ \frac{\pi^2}{6} = \displaystyle\sum_{n=1}^\infty\frac{1}{n^2} \] </div>
-        <div class="soln">
-            <p class="solntext"><b> Solution:</b></p>
-            <div class="solntext-center">
-                \[\frac{1}{\pi}\int_{-\pi}^\pi x^2\,dx = \frac{2}{\pi}\int_0^\pi x^2\,dx = \frac{2}{3}\pi^2 \]
-            </div>
-            <p class="solntext">By Parseval's identity, we obtain</p>
-            <div class="solntext-center">
-                \[\frac{2}{3}\pi^2 = \sum_{n=1}^\infty \frac{4}{n^2} \]
-            </div>
-            <p class="solntext">which simplifies to</p>
-            <div class="solntext-center">
-                \[\frac{\pi^2}{6} = \sum_{n=1}^\infty \frac{1}{n^2}\]
-            </div>
-
-        </div>
-    </li>
-<hr>
-    <li>
-        Suppose that \(f(x)\) is a periodic function on \([-L,L]\) satisfying
-        <div class="center-eqn">$$\int_{-L}^{L} (f(x))^2\,dx
-            < \infty.$$</div>
-    </li>
-    <li> Prove that for every \(n=0,1,2,3,\cdots\), we have
-        <div class="center-eqn">$$ \frac{a^2_0}{2} + \sum_{m=1}^n\left(a_m^2 + b_m^2\right)\leq \frac{1}{L}\int_{-L}^{L}(f(x))^2\,dx$$ </div>
-        <span class="hint">Hint: Consider the partial sum</span>
-        <div class="hint-eqn">$$ S_n(x)=\frac{a_0}{2}+\sum_{m=1}^n\left[a_m\cos\left(\frac{m\pi}{L}x\right) + b_m\sin\left(\frac{m\pi}{L}x\right)\right]$$</div>
-
-        <span class="hint">and expand the error term as</span>
-        <div class="hint-eqn"> $$\int_{-L}^{L}\left(f(x)-S_n(x)\right)^2\,dx $$ </div>
-
-        <div class="soln">
-            <p class="solntext"><b>Solution:</b></p>
-            <p class="solntext-center">
-                \[\begin{align*} \int_{-L}^{L} \left(f(x) - S_n(x)\right)^2\,dx &=\int_{-L}^L (f(x))^2\,dx -2\int_{-L}^L f(x)S_n(x)\,dx + \int_{-L}^L (S_n(x))^2\,dx \end{align*} \]
-            </p>
-            <p class="solntext">Expanding the middle term, we get</p>
-            <p class="solntext-center">
-                \[\int_{-L}^L f(x)S_n(x)\,dx = \int_{-L}^L f(x)\left( \frac{a_0}{2}+\sum_{m=1}^n\left[a_m\cos\left(\frac{m\pi}{L}x\right) + b_m\sin\left(\frac{m\pi}{L}x\right)\right] \right)\,dx \]
-            </p>
-            <p class="solntext">The first term above yields</p>
-            <p class="solntext-center">\[\frac{a_0}{2}\int_{-L}^L f(x)\,dx = L {a_0^2}. \]</p>
-            <p class="solntext">The second term above gives, after interchanging the integral and the sum</p>
-            <p class="solntext-center">
-                \[\sum_{m=1}^n a_m\int_{-L}^L f(x)\cos\left(\frac{m\pi}{L}x\right)\, dx = La_m^2\]
-            </p>
-            <p class="solntext">Similarly, the last sum gives</p>
-            <p class="solntext-center">
-                \[\sum_{m=1}^n b_m\int_{-L}^L f(x)\sin\left(\frac{m\pi}{L}x\right)\, dx = Lb_m^2\]
-            </p>
-            <p class="solntext">Therefore,</p>
-            <p class="solntext-center">
-                \[\int_{-L}^L f(x)S_n(x)\,dx = L\left(\frac{a^2_0}{2}+\sum_{m=1}^n[a_m^2+b_m^2] \right). \]
-            </p>
-            <p class="solntext">Now consider the expansion of \(S^2_n(x)\). Due to the orthogonality of the Fourier series basis functions, we get
-            </p>
-            <p class="solntext-center">
-                \[\int_{-L}^L S^2_n(x)\,dx = \int_{-L}^L \frac{a^2_0}{4}\,dx + \sum_{m=1}^n\int_{-L}^L \left[a_m^2\cos^2 \left(\frac{m\pi}{L}x\right) + b_m^2\sin^2 \left(\frac{m\pi}{L}x\right)\right]\,dx\]
-            </p>
-            <p class="solntext">Using the trig identities</p>
-            <p class="solntext-center">
-                \[\cos^2 (x) = \frac{1}{2}[1+\cos(2x)]\] \[\sin^2(x) = \frac{1}{2}[1-\cos(2x)]\]
-            </p>
-            <p class="solntext">we obtain finally</p>
-            <p class="solntext-center">
-                \[ \int_{-L}^L S^2_n(x) dx = L\left(\frac{a_0}{2} +\sum_{m=1}^n [a_m^2 + b_m^2]\right) \]
-            </p>
-            <p class="solntext"> This shows that</p>
-            <p class="solntext-center">
-                \[\int_{-L}^L f(x)S_n(x)\,dx = \int_{-L}^L S^2_n(x)\, dx\]
-            </p>
-            <p class="solntext">Hence,</p>
-            <p class="solntext-center">
-                \[\int_{-L}^L \left(f(x) - S_n^2(x)\right)^2\,dx = \int_{-L}^L (f(x))^2\,dx - L\left(\frac{a_0}{2} +\sum_{m=1}^n [a_m^2 + b_m^2]\right) \]
-            </p>
-            <p class="solntext">The right hand side is an integral of a positive function, which is positive. Therefore</p>
-            <p class="solntext-center">
-                \[ L\left(\frac{a_0}{2} +\sum_{m=1}^n [a_m^2 + b_m^2]\right) \leq \frac{1}{L}\int_{-L}^L (f(x))^2\,dx. \]
-            </p>
-        </div>
-    </li>
-<hr>
-    </ol>
-    <li>
-        <ol type="a">
-            <li>
-                Compute the Fourier Transform of the function
-                <div class="center-eqn">$$f(x)=\begin{cases} 1, & \text{if } |x|\leq 1\\ 0, & \text{if } |x| > 1. \end{cases} $$
-                </div>
-
-                <div class="soln">
-                    <p class="solntext"><b> Solution: </b></p>
-                    <p class="solntext">
-                        The Fourier Transform of a function \(f(x)\) is given by
-                    </p>
-                    <p class="solntext-center">
-                        $$\widehat{f}(\mu) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty f(x)e^{i\mu x}\,dx $$
-                    </p>
-                    <p class="solntext">In this case, we have</p>
-                    <p class="solntext-center">
-                        $$\begin{align*} \widehat{f}(\mu) &= \frac{1}{\sqrt{2\pi}}\int_{-1}^1 e^{i\mu x}\,dx \\ & = \frac{1}{\sqrt{2\pi}}\int_{-1}^0 e^{i\mu x}\, dx + \frac{1}{\sqrt{2\pi}}\int_0^1 e^{i\mu x}\, dx \\ & = \frac{1}{\sqrt{2\pi}}\int_{0}^1 \left( e^{-i\mu x} + e^{i\mu x}\right)\,dx \\ & = \frac{2}{\sqrt{2\pi}} \int_0^1 \cos(\mu x)\, dx \\ & = \sqrt{\frac{2}{\pi}}\frac{\sin(\mu x)}{\mu}
-                        \end{align*} $$
-                    </p>
-
-
-
-                </div>
-            </li>
-            <hr>
-            <li>
-                Use the method of Fourier Transforms to solve the heat equation below, leaving your solution without the imaginary unit \(i\).
-                <div class="center-eqn">\[ \frac{\partial u}{\partial t} = \alpha \frac{\partial^2 u}{\partial x^2},\,\,\,-\infty
-                    < x < \infty,\,\,t> 0\]</div>
-                <div class="center-eqn">\[ u(x,0) = f(x) = \begin{cases}1, & \text{if } |x|\leq 1\\ 0, & \text{if } |x| > 1. \end{cases}\]</div>
-            </li>
-            <li>
-                Compute the Fourier sine and cosine transforms of the functions below.
-                <ol type="a">
-                    <li>
-                        \[f(x) = e^{-ax},\,\,\,a > 0\]
-                    </li>
-                    <li>
-                        \[ f(x) = \begin{cases}1, & \text{if } |x|\leq 1\\ 0, & \text{if } |x| > 1. \end{cases}\]
-                    </li>
-                </ol>
-                <li>
-                    Use a Fourier sine transform to solve the heat equation
-                    <div class="center-eqn">\[ \frac{\partial u}{\partial t} = \alpha \frac{\partial^2 u}{\partial x^2},\,\,\,0
-                        < x < \infty,\,\,t> 0\]</div>
-                    <div class="center-eqn">\[ u(x,0) = f(x) = e^{-x},\]</div>
-                    <div class="center-eqn ">\[u(0,t)=0. \]</div>
-                </li>
-            </li>
-        </ol>
-    </li>
-
-    </ol>
-    </p>
-
-
-    </div>
-
 </body>
 
 </html>
