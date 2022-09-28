@@ -1,2 +1,3 @@
-# fs2
-Fourier transforms
+
+Course website for Engineering Mathematics2: 
+Fourier Analysis Methods in Partial Differential Equations
