@@ -1,6 +1,9 @@
 body {
     background-color: cornsilk;
 }
+li{
+    margin: 1%;
+}
 
 #hwTitle {
     font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -18,7 +21,7 @@ h1, h2, h3{
 
 .assignments {
     padding-left: 30%;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .solns {
