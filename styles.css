@@ -26,25 +26,25 @@ h1, h2, h3{
     text-align: center;
 }
 
-.assignments {
+/* .assignments {
     padding-left: 30%;
     padding-top: 10px;
 }
 
 .solns {
-    padding-left: 10px;
-}
+    padding-left: 10px; 
+} */
 
 p {
     text-align: center;
 }
 
-@media (min-width: 760px) {
+/* @media (min-width: 760px) {
     .work {
         padding-left: 30%;
         float: center;
     }
-}
+} */
 
 .center-eqn {
     padding-right: 50%;
